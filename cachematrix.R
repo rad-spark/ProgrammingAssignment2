@@ -1,7 +1,7 @@
 ## Caching the inverse of a matrix
 
 
-## This function returns a list of 4 functions
+## This (makeCacheMatrix) function returns a vector of 4 functions
 ##
 ## set        - set the value of the matrix
 ## get        - get the value of the matrix
@@ -23,8 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-## cacheSolve function expects an argument (x) which is the list
+## cacheSolve function expects an argument (x) which is the vector
 ## returned by the makeCacheMatrix function.
 ##
 ## It returns the inverse of the matrix if it already computed and
@@ -32,7 +31,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## in the cache using setinverse and returns the inverse.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         inv <- x$getinverse()
         if(!is.null(inv)) {
                 message("getting cached data")
